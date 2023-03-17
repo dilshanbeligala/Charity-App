@@ -1,3 +1,4 @@
+import 'package:charity_app/screens/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -51,7 +52,10 @@ class GetStarted extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50)),
                     child: Center(
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => SignIn()));
+                        },
                         child: Text(
                           "Get Started",
                           style: GoogleFonts.inter(
