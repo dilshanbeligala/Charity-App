@@ -7,10 +7,12 @@ class GetStarted extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover)),
         child: Container(
@@ -20,54 +22,56 @@ class GetStarted extends StatelessWidget {
             Colors.black.withOpacity(.4)
           ])),
           child: Padding(
-            padding: EdgeInsets.only(left: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 230,
-                ),
-                Text('"Everyone\nCan be Great\nbecause\neveryone can Serve"',
-                    style: GoogleFonts.inter(
-                        fontSize: 30,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold)),
-                SizedBox(
-                  height: 25,
-                ),
-                Text(
-                  "- Martin Luther King -",
-                  style: GoogleFonts.inter(color: Colors.white, fontSize: 18),
-                ),
-                SizedBox(
-                  height: 200,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Container(
-                    height: 50,
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 105, 0, 98),
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Center(
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => SignIn()));
-                        },
-                        child: Text(
-                          "Get Started",
-                          style: GoogleFonts.inter(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500),
+            padding: EdgeInsets.only(left: screenWidth*0.05),
+            child: ListView(
+              children: [Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: screenHeight*0.33,
+                  ),
+                  Text('"Everyone\nCan be Great\nbecause\neveryone can Serve"',
+                      style: GoogleFonts.inter(
+                          fontSize: screenWidth*0.05+10,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: screenHeight*0.04,
+                  ),
+                  Text(
+                    "- Martin Luther King -",
+                    style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.02+8),
+                  ),
+                  SizedBox(
+                    height: screenHeight*0.2,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: Container(
+                      height: 50,
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 105, 0, 98),
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Center(
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (_) => SignIn()));
+                          },
+                          child: Text(
+                            "Get Started",
+                            style: GoogleFonts.inter(
+                                fontSize: screenWidth*0.03+8,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),]
             ),
           ),
         ),
