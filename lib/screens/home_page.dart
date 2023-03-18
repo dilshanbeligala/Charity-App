@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<String> imageList = [
+      'https://www.unicef.org/srilanka/sites/unicef.org.srilanka/files/styles/hero_desktop/public/2018-06/Earl%20Jayasuriya%20167.jpg?itok=RusO09oV',
+      'https://th-i.thgim.com/public/news/national/tiwt69/article65997886.ece/alternates/FREE_1200/sri%20lanka.jpg',
+      'https://www.wfpusa.org/wp-content/uploads/2022/08/WF1583841_5K3A0370.jpg',
+      'https://www.wsws.org/asset/4e585b21-8455-468e-8c74-e0b84bb53275?rendition=image1280',
+      'https://www.habitatsrilanka.org/wp-content/uploads/2020/04/the-housing-need.jpg'
+    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
@@ -14,13 +22,22 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(width: 1)),
-              height: 250,
+          Container(
+            height: 250,
+            child: CarouselSlider(
+              items: imageList.map((imageUrl) {
+                return Container(child: Image.network(imageUrl));
+              }).toList(),
+              options: CarouselOptions(
+                height: 200.0,
+                enlargeCenterPage: true,
+                autoPlay: true,
+                aspectRatio: 16 / 12,
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enableInfiniteScroll: true,
+                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                viewportFraction: 0.8,
+              ),
             ),
           ),
           SizedBox(
@@ -46,21 +63,25 @@ class HomePage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10),
-            child: Container(
-              height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  makeCategory(
-                      Image: 'assets/images/edu.jpg', title: 'Education'),
-                  makeCategory(Image: 'assets/images/food.jpg', title: 'Foods'),
-                  makeCategory(
-                      Image: 'assets/images/cloth.jpg', title: 'Cloths'),
-                  makeCategory(
-                      Image: 'assets/images/med.jpg', title: 'Medicine'),
-                  makeCategory(
-                      Image: 'assets/images/other.jpg', title: 'Others'),
-                ],
+            child: SingleChildScrollView(
+              child: Container(
+                height: 350,
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  children: <Widget>[
+                    makeCategory(
+                        Image: 'assets/images/edu.jpg', title: 'Education'),
+                    makeCategory(
+                        Image: 'assets/images/food.jpg', title: 'Foods'),
+                    makeCategory(
+                        Image: 'assets/images/cloth.jpg', title: 'Cloths'),
+                    makeCategory(
+                        Image: 'assets/images/med.jpg', title: 'Medicine'),
+                    makeCategory(
+                        Image: 'assets/images/other.jpg', title: 'Others'),
+                  ],
+                ),
               ),
             ),
           )
