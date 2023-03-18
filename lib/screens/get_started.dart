@@ -30,7 +30,7 @@ class GetStarted extends StatelessWidget {
                 ),
                 Text('"Everyone\nCan be Great\nbecause\neveryone can Serve"',
                     style: GoogleFonts.inter(
-                        fontSize: 30,
+                        fontSize: 33,
                         color: Colors.white,
                         fontWeight: FontWeight.bold)),
                 SizedBox(
