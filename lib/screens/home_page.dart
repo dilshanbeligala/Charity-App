@@ -1,3 +1,8 @@
+import 'package:charity_app/screens/charity_category/cloths.dart';
+import 'package:charity_app/screens/charity_category/education.dart';
+import 'package:charity_app/screens/charity_category/foods.dart';
+import 'package:charity_app/screens/charity_category/medicine.dart';
+import 'package:charity_app/screens/charity_category/oters.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -70,16 +75,56 @@ class HomePage extends StatelessWidget {
                   crossAxisCount: 2,
                   mainAxisSpacing: 10,
                   children: <Widget>[
-                    makeCategory(
-                        Image: 'assets/images/edu.jpg', title: 'Education'),
-                    makeCategory(
-                        Image: 'assets/images/food.jpg', title: 'Foods'),
-                    makeCategory(
-                        Image: 'assets/images/cloth.jpg', title: 'Cloths'),
-                    makeCategory(
-                        Image: 'assets/images/med.jpg', title: 'Medicine'),
-                    makeCategory(
-                        Image: 'assets/images/other.jpg', title: 'Others'),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Education()),
+                        );
+                      },
+                      child: makeCategory(
+                          Image: 'assets/images/edu.jpg', title: 'Education'),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Foods()),
+                        );
+                      },
+                      child: makeCategory(
+                          Image: 'assets/images/food.jpg', title: 'Foods'),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Clothes()),
+                        );
+                      },
+                      child: makeCategory(
+                          Image: 'assets/images/cloth.jpg', title: 'Cloths'),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Medicine()),
+                        );
+                      },
+                      child: makeCategory(
+                          Image: 'assets/images/med.jpg', title: 'Medicine'),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Others()),
+                        );
+                      },
+                      child: makeCategory(
+                          Image: 'assets/images/other.jpg', title: 'Others'),
+                    ),
                   ],
                 ),
               ),
@@ -97,8 +142,9 @@ Widget makeCategory({Image, title}) {
     child: Container(
       margin: EdgeInsets.only(right: 20),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          image: DecorationImage(image: AssetImage(Image), fit: BoxFit.cover)),
+        borderRadius: BorderRadius.circular(30),
+        image: DecorationImage(image: AssetImage(Image), fit: BoxFit.cover),
+      ),
       child: Container(
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
