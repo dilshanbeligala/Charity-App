@@ -3,6 +3,7 @@ import 'package:charity_app/screens/charity_category/education.dart';
 import 'package:charity_app/screens/charity_category/foods.dart';
 import 'package:charity_app/screens/charity_category/medicine.dart';
 import 'package:charity_app/screens/charity_category/oters.dart';
+import 'package:charity_app/screens/side_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -20,10 +21,22 @@ class HomePage extends StatelessWidget {
       'https://www.habitatsrilanka.org/wp-content/uploads/2020/04/the-housing-need.jpg'
     ];
     return Scaffold(
+      drawer: SideBar(),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
-        leading: Icon(Icons.menu),
-        actions: [Icon(Icons.notifications)],
+        leading: Builder(
+          builder: (context) => IconButton(
+            onPressed: () => Scaffold.of(context).openDrawer(),
+            icon: const Icon(Icons.menu,
+                color: Color.fromARGB(255, 255, 255, 255)),
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Icon(Icons.notifications),
+          )
+        ],
       ),
       body: Column(
         children: [
