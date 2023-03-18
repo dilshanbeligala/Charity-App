@@ -53,11 +53,13 @@ class HomePage extends StatelessWidget {
                 children: <Widget>[
                   makeCategory(
                       Image: 'assets/images/edu.jpg', title: 'Education'),
-                  // makeCategory(
-                  //     Image: 'images/clothes.jpg', title: 'Clothes'),
-                  // makeCategory(
-                  //     Image: 'images/perfume.jpg', title: 'Perfume'),
-                  // makeCategory(Image: 'images/glass.jpg', title: 'Glass'),
+                  makeCategory(Image: 'assets/images/food.jpg', title: 'Foods'),
+                  makeCategory(
+                      Image: 'assets/images/cloth.jpg', title: 'Cloths'),
+                  makeCategory(
+                      Image: 'assets/images/med.jpg', title: 'Medicine'),
+                  makeCategory(
+                      Image: 'assets/images/other.jpg', title: 'Others'),
                 ],
               ),
             ),
