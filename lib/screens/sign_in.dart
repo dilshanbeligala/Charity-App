@@ -7,6 +7,8 @@ class SignIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
@@ -17,25 +19,25 @@ class SignIn extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              height: 300,
+              height: screenHeight*0.4,
             ),
             Expanded(
                 child: Column(
               children: [
                 Container(
-                  padding: EdgeInsets.only(left: 40, top: 15),
+                  padding: EdgeInsets.only(left: screenWidth*0.1, top: screenHeight*0.02),
                   alignment: Alignment.topLeft,
                   child: Text(
                     "Join With\n   Charity Services",
                     style: GoogleFonts.inter(
-                      fontSize: 30,
+                      fontSize: screenWidth*0.05+10,
                       fontWeight: FontWeight.w900,
                       color: Color.fromARGB(255, 105, 0, 98),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: screenHeight*0.08,
                 ),
                 Container(
                   child: Column(
