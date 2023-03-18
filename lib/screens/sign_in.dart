@@ -1,3 +1,4 @@
+import 'package:charity_app/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -7,6 +8,7 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
@@ -24,7 +26,7 @@ class SignIn extends StatelessWidget {
                   padding: EdgeInsets.only(left: 40, top: 15),
                   alignment: Alignment.topLeft,
                   child: Text(
-                    "Join With\nCharity Services",
+                    "Join With\n   Charity Services",
                     style: GoogleFonts.inter(
                       fontSize: 30,
                       fontWeight: FontWeight.w900,
@@ -79,8 +81,8 @@ class SignIn extends StatelessWidget {
                     child: Center(
                       child: InkWell(
                         onTap: () {
-                          // Navigator.push(context,
-                          //     MaterialPageRoute(builder: (_) => SignIn()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => HomePage()));
                         },
                         child: Text(
                           "Join",
