@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SideBar extends StatelessWidget {
   const SideBar({super.key});
@@ -12,10 +13,12 @@ class SideBar extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             UserAccountsDrawerHeader(
-              accountName: Text('Chamika Dilshan'),
-              accountEmail: Text(
-                'beligaladilshan@gmail.com',
+              accountName: Text(
+                'Chamika Dilshan',
+                style: GoogleFonts.inter(),
               ),
+              accountEmail:
+                  Text('beligaladilshan@gmail.com', style: GoogleFonts.inter()),
               currentAccountPicture: CircleAvatar(
                 child: GestureDetector(
                   onTap: () {
@@ -36,7 +39,7 @@ class SideBar extends StatelessWidget {
                 ),
               ),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 105, 0, 98),
+                color: Color.fromARGB(255, 67, 1, 63),
               ),
             ),
             ListTile(
@@ -47,7 +50,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Notifications',
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
               ),
               onTap: () => null,
             ),
@@ -59,7 +62,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Account Settings',
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
               ),
               onTap: () => null,
             ),
@@ -71,7 +74,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Help',
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
               ),
               onTap: () => null,
             ),
@@ -83,7 +86,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'App Settings',
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
               ),
               onTap: () {
                 // Navigator.push(context,
@@ -98,7 +101,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Contact Us',
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
               ),
               onTap: () {
                 // Navigator.push(
