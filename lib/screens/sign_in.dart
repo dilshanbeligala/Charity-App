@@ -37,13 +37,13 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: screenHeight*0.08,
+                  height: screenHeight*0.07,
                 ),
                 Container(
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 30, right: 30),
+                        padding: EdgeInsets.only(left: screenWidth*0.08, right: screenWidth*0.08),
                         child: Form(
                             child: Column(
                           children: [
@@ -55,7 +55,7 @@ class SignIn extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              height: 30,
+                              height: screenHeight*0.03,
                             ),
                             TextFormField(
                               decoration: InputDecoration(
@@ -71,10 +71,10 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 85,
+                  height: screenHeight*0.09,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 40, right: 40),
+                  padding: EdgeInsets.only(left: screenWidth*0.08, right:screenWidth*0.08),
                   child: Container(
                     height: 50,
                     decoration: BoxDecoration(

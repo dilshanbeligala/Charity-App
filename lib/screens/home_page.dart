@@ -14,58 +14,60 @@ class HomePage extends StatelessWidget {
       'https://www.wsws.org/asset/4e585b21-8455-468e-8c74-e0b84bb53275?rendition=image1280',
       'https://www.habitatsrilanka.org/wp-content/uploads/2020/04/the-housing-need.jpg'
     ];
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
         leading: Icon(Icons.menu),
         actions: [Icon(Icons.notifications)],
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 250,
-            child: CarouselSlider(
-              items: imageList.map((imageUrl) {
-                return Container(child: Image.network(imageUrl));
-              }).toList(),
-              options: CarouselOptions(
-                height: 200.0,
-                enlargeCenterPage: true,
-                autoPlay: true,
-                aspectRatio: 16 / 12,
-                autoPlayCurve: Curves.fastOutSlowIn,
-                enableInfiniteScroll: true,
-                autoPlayAnimationDuration: Duration(milliseconds: 800),
-                viewportFraction: 0.8,
+      body: ListView(
+        children:[ Column(
+          children: [
+            Container(
+              height: screenHeight*0.4,
+              child: CarouselSlider(
+                items: imageList.map((imageUrl) {
+                  return Container(child: Image.network(imageUrl));
+                }).toList(),
+                options: CarouselOptions(
+                  height: screenHeight*0.7,
+                  enlargeCenterPage: true,
+                  autoPlay: true,
+                  aspectRatio: 16 / 12,
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enableInfiniteScroll: true,
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  viewportFraction: 0.8,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    "Categories",
-                    style: GoogleFonts.inter(
-                        fontSize: 25, fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
+            SizedBox(
+              height: screenHeight*0.008,
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: SingleChildScrollView(
+            Padding(
+              padding: EdgeInsets.only(left: screenWidth*0.035),
               child: Container(
-                height: 350,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Categories",
+                      style: GoogleFonts.inter(
+                          fontSize: screenWidth*0.035+12, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: screenHeight*0.02,
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: screenWidth*0.035),
+              child:Container(
+                height: screenHeight*0.9,
                 child: GridView.count(
                   crossAxisCount: 2,
                   mainAxisSpacing: 10,
@@ -84,8 +86,11 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-          )
-        ],
+      SizedBox(
+              height: screenHeight*0.05,
+            ),
+          ],
+        ),]
       ),
     );
   }
