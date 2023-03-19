@@ -18,8 +18,9 @@ class HomePage extends StatelessWidget {
       'https://www.unicef.org/srilanka/sites/unicef.org.srilanka/files/styles/hero_desktop/public/2018-06/Earl%20Jayasuriya%20167.jpg?itok=RusO09oV',
       'https://th-i.thgim.com/public/news/national/tiwt69/article65997886.ece/alternates/FREE_1200/sri%20lanka.jpg',
       'https://www.wfpusa.org/wp-content/uploads/2022/08/WF1583841_5K3A0370.jpg',
-      'https://www.wsws.org/asset/4e585b21-8455-468e-8c74-e0b84bb53275?rendition=image1280',
-      'https://www.habitatsrilanka.org/wp-content/uploads/2020/04/the-housing-need.jpg'
+      'https://www.unicef.org/srilanka/sites/unicef.org.srilanka/files/styles/hero_desktop/public/tips%20for%20parenting.jpg?itok=ovedmfDa',
+      'https://www.habitatsrilanka.org/wp-content/uploads/2020/04/the-housing-need.jpg',
+      'https://www.unicef.org/srilanka/sites/unicef.org.srilanka/files/styles/hero_desktop/public/Screenshot%202022-07-05%20at%2005.07.57.png?itok=jQf23je_'
     ];
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
