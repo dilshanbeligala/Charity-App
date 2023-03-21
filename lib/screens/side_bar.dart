@@ -6,6 +6,8 @@ class SideBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Drawer(
       child: Container(
         color: Color.fromARGB(255, 105, 0, 98),
@@ -50,7 +52,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Notifications',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10,),
               ),
               onTap: () => null,
             ),
@@ -62,7 +64,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Account Settings',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white,fontSize: screenWidth*0.015+10, ),
               ),
               onTap: () => null,
             ),
@@ -74,7 +76,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Help',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10,),
               ),
               onTap: () => null,
             ),
@@ -86,7 +88,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'App Settings',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10,),
               ),
               onTap: () {
                 // Navigator.push(context,
@@ -101,7 +103,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Contact Us',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10,),
               ),
               onTap: () {
                 // Navigator.push(
