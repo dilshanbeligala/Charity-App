@@ -32,7 +32,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromARGB(255, 105, 0, 98),
       body: Center(
         child: FutureBuilder(
           future: _loadDataFuture,
@@ -57,7 +57,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                   CircularProgressIndicator(
                     strokeWidth: 5,
-                    color: Color.fromARGB(255, 105, 0, 98),
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
                 ],
               );
