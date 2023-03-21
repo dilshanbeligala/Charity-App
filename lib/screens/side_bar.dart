@@ -1,3 +1,4 @@
+import 'package:charity_app/screens/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,12 +16,12 @@ class SideBar extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             SizedBox(
-              height: screenHeight*0.08,
+              height: screenHeight * 0.08,
             ),
             ListTile(
               title: Image.asset(
                 'assets/images/load.png',
-                height: screenHeight*0.15,
+                height: screenHeight * 0.15,
                 //width: screenWidth*0.05,
               ),
             ),
@@ -28,7 +29,8 @@ class SideBar extends StatelessWidget {
               title: Center(
                 child: Text(
                   "beligaladilshan@gmail.com",
-                  style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
+                  style: GoogleFonts.inter(
+                      color: Colors.white, fontSize: screenWidth * 0.015 + 10),
                 ),
               ),
             ),
@@ -36,23 +38,28 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.notifications,
                 color: Colors.white,
-                size: screenWidth*0.08,
+                size: screenWidth * 0.08,
               ),
               title: Text(
                 'Notifications',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
+                style: GoogleFonts.inter(
+                    color: Colors.white, fontSize: screenWidth * 0.015 + 10),
               ),
-              onTap: () => null,
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => Notification_page()));
+              },
             ),
             ListTile(
               leading: Icon(
                 Icons.account_box,
                 color: Colors.white,
-                size: screenWidth*0.08,
+                size: screenWidth * 0.08,
               ),
               title: Text(
                 'Account Settings',
-                style: GoogleFonts.inter(color: Colors.white,fontSize: screenWidth*0.015+10),
+                style: GoogleFonts.inter(
+                    color: Colors.white, fontSize: screenWidth * 0.015 + 10),
               ),
               onTap: () => null,
             ),
@@ -60,11 +67,12 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.help,
                 color: Colors.white,
-                size: screenWidth*0.08,
+                size: screenWidth * 0.08,
               ),
               title: Text(
                 'Help',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
+                style: GoogleFonts.inter(
+                    color: Colors.white, fontSize: screenWidth * 0.015 + 10),
               ),
               onTap: () => null,
             ),
@@ -72,11 +80,12 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.settings,
                 color: Colors.white,
-                size: screenWidth*0.08,
+                size: screenWidth * 0.08,
               ),
               title: Text(
                 'App Settings',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
+                style: GoogleFonts.inter(
+                    color: Colors.white, fontSize: screenWidth * 0.015 + 10),
               ),
               onTap: () {
                 // Navigator.push(context,
@@ -87,11 +96,12 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.contact_phone,
                 color: Colors.white,
-                size: screenWidth*0.08,
+                size: screenWidth * 0.08,
               ),
               title: Text(
                 'Contact Us',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
+                style: GoogleFonts.inter(
+                    color: Colors.white, fontSize: screenWidth * 0.015 + 10),
               ),
               onTap: () {
                 // Navigator.push(

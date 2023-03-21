@@ -3,6 +3,7 @@ import 'package:charity_app/screens/charity_category/education.dart';
 import 'package:charity_app/screens/charity_category/foods.dart';
 import 'package:charity_app/screens/charity_category/medicine.dart';
 import 'package:charity_app/screens/charity_category/oters.dart';
+import 'package:charity_app/screens/notification.dart';
 import 'package:charity_app/screens/side_bar.dart';
 import 'package:charity_app/theme/glass.dart';
 import 'package:flutter/material.dart';
@@ -40,10 +41,12 @@ class HomePage extends StatelessWidget {
           child: Text("අත්වැල"),
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: Icon(Icons.notifications),
-          )
+          IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => Notification_page()));
+              },
+              icon: Icon(Icons.notifications))
         ],
       ),
       body: ListView(children: [
