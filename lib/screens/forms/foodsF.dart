@@ -11,91 +11,90 @@ class Foods_form extends StatefulWidget {
 class _Foods_formState extends State<Foods_form> {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 70),
-          child: Text("අත්වැල"),
-        ),
+        title: Text("අත්වැල"),
       ),
       body: ListView(children: [
         Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 20),
+              padding:  EdgeInsets.only(top: screenHeight*0.05, bottom: screenHeight*0.05),
               child: Image.asset(
                 'assets/images/logo.png',
-                height: 120,
-                width: 120,
-                //width: screenWidth*0.05,
+                height: screenHeight*0.15,
+                width: screenWidth*0.3,
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 30),
               child: Text(
                 "Add New Educational Charity",
-                style: GoogleFonts.inter(color: Colors.black, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.black, fontSize: screenWidth * 0.03 + 8,),
               ),
             ),
             Container(
               child: Padding(
-                padding: const EdgeInsets.only(left: 30, right: 30),
+                padding: EdgeInsets.only(left: screenWidth*0.08, right: screenWidth*0.08),
                 child: Form(
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
+                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
-                            hintText: "Enter District",
+                            hintText: "District",
                             prefixIcon: Icon(Icons.map),
                             border: UnderlineInputBorder(),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
+                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
-                            hintText: "School/Institute",
+                            hintText: "School/Institute/Village or other place",
                             prefixIcon: Icon(Icons.school),
                             border: UnderlineInputBorder(),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
+                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
-                            hintText: "School/Institute Address",
+                            hintText: "Place Address",
                             prefixIcon: Icon(Icons.home),
                             border: UnderlineInputBorder(),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
+                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
-                            hintText: "List of Items",
+                            hintText: "List of food items",
                             prefixIcon: Icon(Icons.list),
                             border: UnderlineInputBorder(),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
+                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
-                            hintText: "Number of Students",
+                            hintText: "Number of people",
                             prefixIcon: Icon(Icons.people),
                             border: UnderlineInputBorder(),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
+                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "Description about Donation",
@@ -105,7 +104,7 @@ class _Foods_formState extends State<Foods_form> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 50),
+                        padding:EdgeInsets.only(bottom:screenHeight*0.1),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "Contact Numbers",
@@ -115,9 +114,9 @@ class _Foods_formState extends State<Foods_form> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 20),
+                        padding: EdgeInsets.only(right:screenWidth*0.02 ,left:screenWidth*0.02),
                         child: Container(
-                          height: 50,
+                          height: screenHeight*0.075,
                           decoration: BoxDecoration(
                               color: Color.fromARGB(255, 105, 0, 98),
                               borderRadius: BorderRadius.circular(50)),
@@ -130,7 +129,7 @@ class _Foods_formState extends State<Foods_form> {
                               child: Text(
                                 "ADD",
                                 style: GoogleFonts.inter(
-                                    fontSize: 20,
+                                    fontSize: screenWidth * 0.03 + 8,
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500),
                               ),
@@ -139,7 +138,7 @@ class _Foods_formState extends State<Foods_form> {
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: screenHeight*0.05,
                       )
                     ],
                   ),
