@@ -29,7 +29,20 @@ class GetStarted extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: screenHeight * 0.33,
+                    height: screenHeight * 0.05,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Image(
+                        image: AssetImage('assets/images/Glogo.png'),
+                        width: 100,
+                        height: 100,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: screenHeight * 0.20,
                   ),
                   Text('"Everyone\nCan be Great\nbecause\neveryone can Serve"',
                       style: GoogleFonts.inter(
