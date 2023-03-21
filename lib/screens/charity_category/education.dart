@@ -7,18 +7,11 @@ class Education extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
         title: Padding(
           padding: const EdgeInsets.only(left: 70),
           child: Text("අත්වැල"),
-=======
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 105, 0, 98),
-          title: Text("අත්වැල"),
->>>>>>> fd7ec3d6b5bd6f1aca3ff2c0f0e81a124b37d16a
         ),
       ),
       body: Padding(
