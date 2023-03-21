@@ -1,4 +1,5 @@
 import 'package:charity_app/screens/forms/othersF.dart';
+import 'package:charity_app/screens/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,6 +15,14 @@ class Others extends StatelessWidget {
           padding: const EdgeInsets.only(left: 70),
           child: Text("අත්වැල"),
         ),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => Notification_page()));
+              },
+              icon: Icon(Icons.notifications))
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
