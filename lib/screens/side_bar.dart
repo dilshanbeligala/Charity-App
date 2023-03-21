@@ -14,34 +14,22 @@ class SideBar extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            UserAccountsDrawerHeader(
-              accountName: Text(
-                'Chamika Dilshan',
-                style: GoogleFonts.inter(),
+            SizedBox(
+              height: 50,
+            ),
+            ListTile(
+              title: Image.asset(
+                'assets/images/load.png',
+                height: 100,
+                width: 50,
               ),
-              accountEmail:
-                  Text('beligaladilshan@gmail.com', style: GoogleFonts.inter()),
-              currentAccountPicture: CircleAvatar(
-                child: GestureDetector(
-                  onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => ProfileTraveler(),
-                    //     ));
-                  },
-                  child: ClipOval(
-                      // child: Image.asset(
-                      //   // 'assets/images/homepage_new/bella.jpg',
-                      //   // fit: BoxFit.cover,
-                      //   // width: 90,
-                      //   // height: 150,
-                      // ),
-                      ),
+            ),
+            ListTile(
+              title: Center(
+                child: Text(
+                  "beligaladilshan@gmail.com",
+                  style: GoogleFonts.inter(color: Colors.white, fontSize: 15),
                 ),
-              ),
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 67, 1, 63),
               ),
             ),
             ListTile(
@@ -52,7 +40,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Notifications',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10,),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 18),
               ),
               onTap: () => null,
             ),
@@ -64,7 +52,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Account Settings',
-                style: GoogleFonts.inter(color: Colors.white,fontSize: screenWidth*0.015+10, ),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
               ),
               onTap: () => null,
             ),
@@ -76,7 +64,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Help',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10,),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
               ),
               onTap: () => null,
             ),
@@ -88,7 +76,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'App Settings',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10,),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
               ),
               onTap: () {
                 // Navigator.push(context,
@@ -103,7 +91,7 @@ class SideBar extends StatelessWidget {
               ),
               title: Text(
                 'Contact Us',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10,),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
               ),
               onTap: () {
                 // Navigator.push(

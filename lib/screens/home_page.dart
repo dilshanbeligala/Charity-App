@@ -35,6 +35,10 @@ class HomePage extends StatelessWidget {
                 color: Color.fromARGB(255, 255, 255, 255)),
           ),
         ),
+        title: Padding(
+          padding: const EdgeInsets.only(left: 70),
+          child: Text("අත්වැල"),
+        ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
