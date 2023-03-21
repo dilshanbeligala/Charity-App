@@ -1,3 +1,4 @@
+import 'package:charity_app/screens/forms/educatinF.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,8 +29,8 @@ class Education extends StatelessWidget {
                 child: Center(
                   child: InkWell(
                     onTap: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (_) => SignIn()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => Edu_form()));
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
