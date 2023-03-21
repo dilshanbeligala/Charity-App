@@ -15,20 +15,20 @@ class SideBar extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             SizedBox(
-              height: 50,
+              height: screenHeight*0.08,
             ),
             ListTile(
               title: Image.asset(
                 'assets/images/load.png',
-                height: 100,
-                width: 50,
+                height: screenHeight*0.15,
+                //width: screenWidth*0.05,
               ),
             ),
             ListTile(
               title: Center(
                 child: Text(
                   "beligaladilshan@gmail.com",
-                  style: GoogleFonts.inter(color: Colors.white, fontSize: 15),
+                  style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
                 ),
               ),
             ),
@@ -36,11 +36,11 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.notifications,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'Notifications',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 18),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
               ),
               onTap: () => null,
             ),
@@ -48,11 +48,11 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.account_box,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'Account Settings',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white,fontSize: screenWidth*0.015+10),
               ),
               onTap: () => null,
             ),
@@ -60,11 +60,11 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.help,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'Help',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
               ),
               onTap: () => null,
             ),
@@ -72,11 +72,11 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.settings,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'App Settings',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
               ),
               onTap: () {
                 // Navigator.push(context,
@@ -87,11 +87,11 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.contact_phone,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'Contact Us',
-                style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.015+10),
               ),
               onTap: () {
                 // Navigator.push(
