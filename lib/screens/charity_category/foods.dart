@@ -110,55 +110,6 @@ class _FoodsState extends State<Foods> {
                   ),
                 ),
               ),
-<<<<<<< HEAD
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 5, bottom: 20),
-              width: MediaQuery.of(context).size.width,
-              height: 55,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: TextField(
-                onChanged: ((value) => updateList(value)),
-                decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "Search district here....",
-                    hintStyle: TextStyle(
-                      color: Color.fromARGB(255, 105, 0, 98),
-                    ),
-                    prefixIcon: Icon(
-                      Icons.search,
-                      size: 25,
-                      color: Color.fromARGB(255, 105, 0, 98),
-                    )),
-              ),
-            ),
-            Expanded(
-              child: ListView.builder(
-                  itemCount: display_list.length,
-                  itemBuilder: (context, index) => ListTile(
-                        contentPadding: EdgeInsets.all(8.0),
-                        title: Text(
-                          display_list[index].district!,
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        onTap: (() {
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: ((context) => ShedPage())));
-                        }),
-                      )),
-            )
-          ],
-=======
               SizedBox(
                 height: screenHeight*0.03,
               ),
@@ -183,10 +134,26 @@ class _FoodsState extends State<Foods> {
                           size: screenWidth*0.06,
                           color:const Color.fromARGB(255, 105, 0, 98),
                         )),
-                  )),
+                  )),Expanded(
+                child: ListView.builder(
+                    itemCount: display_list.length,
+                    itemBuilder: (context, index) => ListTile(
+                          contentPadding: EdgeInsets.all(8.0),
+                          title: Text(
+                            display_list[index].district!,
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          onTap: (() {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: ((context) => ShedPage())));
+                          }),
+                        )),
+              )
             ],
           ),
->>>>>>> 8a7fc74cd0429ad44a34abb363248e09888235c1
         ),
       ),
     );

@@ -70,14 +70,17 @@ class _OthersState extends State<Others> {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.only(left: screenWidth*0.04, right: screenWidth*0.04, top: screenHeight*0.03),
+        padding: EdgeInsets.only(
+            left: screenWidth * 0.04,
+            right: screenWidth * 0.04,
+            top: screenHeight * 0.03),
         child: Center(
           child: Column(
             children: [
               Container(
-                height: screenHeight*0.07,
+                height: screenHeight * 0.07,
                 decoration: BoxDecoration(
-                    color:const Color.fromARGB(255, 105, 0, 98),
+                    color: const Color.fromARGB(255, 105, 0, 98),
                     borderRadius: BorderRadius.circular(50)),
                 child: Center(
                   child: InkWell(
@@ -89,17 +92,17 @@ class _OthersState extends State<Others> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(left: screenWidth*0.08),
+                          padding: EdgeInsets.only(left: screenWidth * 0.08),
                           child: Text(
                             "Add New Charity",
                             style: GoogleFonts.inter(
-                                fontSize: screenWidth*0.03+8,
+                                fontSize: screenWidth * 0.03 + 8,
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: screenWidth*0.04),
+                          padding: EdgeInsets.only(right: screenWidth * 0.04),
                           child: const Icon(
                             Icons.add,
                             color: Colors.white,
@@ -110,53 +113,52 @@ class _OthersState extends State<Others> {
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 5, bottom: 20),
-              width: MediaQuery.of(context).size.width,
-              height: 55,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+              SizedBox(
+                height: screenHeight * 0.03,
               ),
-              child: TextField(
-                onChanged: ((value) => updateList(value)),
-                decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: "Search district here....",
-                    hintStyle: TextStyle(
-                      color: Color.fromARGB(255, 105, 0, 98),
-                    ),
-                    prefixIcon: Icon(
-                      Icons.search,
-                      size: 25,
-                      color: Color.fromARGB(255, 105, 0, 98),
-                    )),
-              ),
-            ),
-            Expanded(
-              child: ListView.builder(
-                  itemCount: display_list.length,
-                  itemBuilder: (context, index) => ListTile(
-                        contentPadding: EdgeInsets.all(8.0),
-                        title: Text(
-                          display_list[index].district!,
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
+              Container(
+                  margin: EdgeInsets.only(
+                      top: screenHeight * 0.01, bottom: screenHeight * 0.05),
+                  width: MediaQuery.of(context).size.width,
+                  height: screenHeight * 0.08,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        border: const UnderlineInputBorder(),
+                        hintText: "Search district here....",
+                        hintStyle: const TextStyle(
+                          color: Color.fromARGB(255, 105, 0, 98),
                         ),
-                        onTap: (() {
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: ((context) => ShedPage())));
-                        }),
-                      )),
-            )
-          ],
+                        prefixIcon: Icon(
+                          Icons.search,
+                          size: screenWidth * 0.06,
+                          color: const Color.fromARGB(255, 105, 0, 98),
+                        )),
+                  )),
+              Expanded(
+                child: ListView.builder(
+                    itemCount: display_list.length,
+                    itemBuilder: (context, index) => ListTile(
+                          contentPadding: EdgeInsets.all(8.0),
+                          title: Text(
+                            display_list[index].district!,
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          onTap: (() {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: ((context) => ShedPage())));
+                          }),
+                        )),
+              )
+            ],
+          ),
         ),
       ),
     );
