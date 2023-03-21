@@ -127,6 +127,7 @@ class _EducationState extends State<Education> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: TextFormField(
+                    onChanged: ((value) => updateList(value)),
                     decoration: InputDecoration(
                         border: const UnderlineInputBorder(),
                         hintText: "Search district here....",
