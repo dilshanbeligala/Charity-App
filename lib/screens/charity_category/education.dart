@@ -1,4 +1,5 @@
 import 'package:charity_app/screens/forms/educatinF.dart';
+import 'package:charity_app/screens/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +14,23 @@ class Education extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
+<<<<<<< HEAD
         title: Text("අත්වැල"),),
+=======
+        title: Padding(
+          padding: const EdgeInsets.only(left: 70),
+          child: Text("අත්වැල"),
+        ),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => Notification_page()));
+              },
+              icon: Icon(Icons.notifications))
+        ],
+      ),
+>>>>>>> 71e8a09a2d567a1180aa1bbb13030707c16863a7
       body: Padding(
         padding: EdgeInsets.only(left: screenWidth*0.04, right: screenWidth*0.04, top: screenHeight*0.03),
         child: Center(

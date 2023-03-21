@@ -1,4 +1,5 @@
 import 'package:charity_app/screens/forms/clothsF.dart';
+import 'package:charity_app/screens/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +14,10 @@ class Clothes extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
-        title: const Text("අත්වැල"),
+        title: Padding(
+          padding: const EdgeInsets.only(left: 70),
+          child: Text("අත්වැල"),
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.only(left: screenWidth*0.04, right: screenWidth*0.04, top: screenHeight*0.03),
