@@ -15,13 +15,13 @@ class SideBar extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             SizedBox(
-              height: 50,
+              height: screenHeight*0.08,
             ),
             ListTile(
               title: Image.asset(
                 'assets/images/load.png',
-                height: 100,
-                width: 50,
+                height: screenHeight*0.15,
+                //width: screenWidth*0.05,
               ),
             ),
             ListTile(
@@ -36,7 +36,7 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.notifications,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'Notifications',
@@ -48,7 +48,7 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.account_box,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'Account Settings',
@@ -60,7 +60,7 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.help,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'Help',
@@ -72,7 +72,7 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.settings,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'App Settings',
@@ -87,7 +87,7 @@ class SideBar extends StatelessWidget {
               leading: Icon(
                 Icons.contact_phone,
                 color: Colors.white,
-                size: 30,
+                size: screenWidth*0.08,
               ),
               title: Text(
                 'Contact Us',
