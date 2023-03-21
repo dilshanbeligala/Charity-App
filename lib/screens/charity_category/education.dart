@@ -12,17 +12,7 @@ class Education extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 70),
-          child: Text("අත්වැල"),
-=======
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 105, 0, 98),
-          title: Text("අත්වැල"),
->>>>>>> fd7ec3d6b5bd6f1aca3ff2c0f0e81a124b37d16a
-        ),
-      ),
+        title: Text("අත්වැල"),),
       body: Padding(
         padding: EdgeInsets.only(left: screenWidth*0.04, right: screenWidth*0.04, top: screenHeight*0.03),
         child: Center(
