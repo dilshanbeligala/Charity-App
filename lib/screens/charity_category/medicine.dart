@@ -14,9 +14,6 @@ class Medicine extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
-<<<<<<< HEAD
-        title: const Text("අත්වැල"),
-=======
         title: Padding(
           padding: const EdgeInsets.only(left: 70),
           child: Text("අත්වැල"),
@@ -29,7 +26,6 @@ class Medicine extends StatelessWidget {
               },
               icon: Icon(Icons.notifications))
         ],
->>>>>>> 71e8a09a2d567a1180aa1bbb13030707c16863a7
       ),
       body: Padding(
         padding: EdgeInsets.only(left: screenWidth*0.04, right: screenWidth*0.04, top: screenHeight*0.03),
