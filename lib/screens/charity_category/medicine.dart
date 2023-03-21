@@ -1,3 +1,4 @@
+import 'package:charity_app/screens/forms/medicineF.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,8 +29,8 @@ class Medicine extends StatelessWidget {
                 child: Center(
                   child: InkWell(
                     onTap: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (_) => SignIn()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => Med_form()));
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
