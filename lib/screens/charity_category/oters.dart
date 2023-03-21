@@ -1,3 +1,4 @@
+import 'package:charity_app/screens/forms/othersF.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -27,8 +28,8 @@ class Others extends StatelessWidget {
                 child: Center(
                   child: InkWell(
                     onTap: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (_) => SignIn()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => Others_form()));
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

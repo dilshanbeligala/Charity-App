@@ -12,7 +12,7 @@ class GetStarted extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration:const BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover)),
         child: Container(
@@ -22,29 +22,30 @@ class GetStarted extends StatelessWidget {
             Colors.black.withOpacity(.4)
           ])),
           child: Padding(
-            padding: EdgeInsets.only(left: screenWidth*0.05),
-            child: ListView(
-              children: [Column(
+            padding: EdgeInsets.only(left: screenWidth * 0.05),
+            child: ListView(children: [
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: screenHeight*0.33,
+                    height: screenHeight * 0.33,
                   ),
                   Text('"Everyone\nCan be Great\nbecause\neveryone can Serve"',
                       style: GoogleFonts.inter(
-                          fontSize: screenWidth*0.05+10,
+                          fontSize: screenWidth * 0.05 + 10,
                           color: Colors.white,
                           fontWeight: FontWeight.bold)),
                   SizedBox(
-                    height: screenHeight*0.04,
+                    height: screenHeight * 0.04,
                   ),
                   Text(
                     "- Martin Luther King -",
-                    style: GoogleFonts.inter(color: Colors.white, fontSize: screenWidth*0.02+8),
+                    style: GoogleFonts.inter(
+                        color: Colors.white, fontSize: screenWidth * 0.02 + 8),
                   ),
                   SizedBox(
-                    height: screenHeight*0.2,
+                    height: screenHeight * 0.2,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 20),
@@ -62,7 +63,7 @@ class GetStarted extends StatelessWidget {
                           child: Text(
                             "Get Started",
                             style: GoogleFonts.inter(
-                                fontSize: screenWidth*0.03+8,
+                                fontSize: screenWidth * 0.03 + 8,
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500),
                           ),
@@ -71,8 +72,8 @@ class GetStarted extends StatelessWidget {
                     ),
                   )
                 ],
-              ),]
-            ),
+              ),
+            ]),
           ),
         ),
       ),
