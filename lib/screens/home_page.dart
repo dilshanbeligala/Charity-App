@@ -50,13 +50,15 @@ class HomePage extends StatelessWidget {
         Column(
           children: [
             Container(
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(98, 192, 2, 210).withOpacity(.15)),
               height: screenHeight * 0.4,
               child: CarouselSlider(
                 items: imageList.map((imageUrl) {
                   return Container(child: Image.network(imageUrl));
                 }).toList(),
                 options: CarouselOptions(
-                  height: screenHeight * 0.7,
+                  height: screenHeight * 0.6,
                   enlargeCenterPage: true,
                   autoPlay: true,
                   aspectRatio: 16 / 12,
