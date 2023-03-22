@@ -59,14 +59,17 @@ class _ClothesState extends State<Clothes> {
         title: Text("අත්වැල"),
       ),
       body: Padding(
-        padding: EdgeInsets.only(left: screenWidth*0.04, right: screenWidth*0.04, top: screenHeight*0.03),
+        padding: EdgeInsets.only(
+            left: screenWidth * 0.04,
+            right: screenWidth * 0.04,
+            top: screenHeight * 0.03),
         child: Center(
           child: Column(
             children: [
               Container(
-                height: screenHeight*0.07,
+                height: screenHeight * 0.07,
                 decoration: BoxDecoration(
-                    color:const Color.fromARGB(255, 105, 0, 98),
+                    color: const Color.fromARGB(255, 105, 0, 98),
                     borderRadius: BorderRadius.circular(50)),
                 child: Center(
                   child: InkWell(
@@ -78,17 +81,17 @@ class _ClothesState extends State<Clothes> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(left: screenWidth*0.08),
+                          padding: EdgeInsets.only(left: screenWidth * 0.08),
                           child: Text(
-                            "Add New Charity",
+                            "Request Clothes Charity",
                             style: GoogleFonts.inter(
-                                fontSize: screenWidth*0.03+8,
+                                fontSize: screenWidth * 0.03 + 8,
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: screenWidth*0.04),
+                          padding: EdgeInsets.only(right: screenWidth * 0.04),
                           child: const Icon(
                             Icons.add,
                             color: Colors.white,
@@ -100,12 +103,18 @@ class _ClothesState extends State<Clothes> {
                 ),
               ),
               SizedBox(
-                height: screenHeight*0.03,
+                height: screenHeight * 0.08,
+              ),
+              Text(
+                "Donate Clothes Charities",
+                style: GoogleFonts.inter(
+                    fontSize: 20, fontWeight: FontWeight.bold),
               ),
               Container(
-                  margin: EdgeInsets.only(top: screenHeight*0.01, bottom: screenHeight*0.05),
+                  margin: EdgeInsets.only(
+                      top: screenHeight * 0.01, bottom: screenHeight * 0.05),
                   width: MediaQuery.of(context).size.width,
-                  height: screenHeight*0.08,
+                  height: screenHeight * 0.08,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -114,17 +123,18 @@ class _ClothesState extends State<Clothes> {
                   child: TextFormField(
                     onChanged: ((value) => updateList(value)),
                     decoration: InputDecoration(
-                        border:const UnderlineInputBorder(),
+                        border: const UnderlineInputBorder(),
                         hintText: "Search district here....",
                         hintStyle: const TextStyle(
                           color: Color.fromARGB(255, 105, 0, 98),
                         ),
                         prefixIcon: Icon(
                           Icons.search,
-                          size: screenWidth*0.06,
-                          color:const Color.fromARGB(255, 105, 0, 98),
+                          size: screenWidth * 0.06,
+                          color: const Color.fromARGB(255, 105, 0, 98),
                         )),
-                  )),Expanded(
+                  )),
+              Expanded(
                 child: ListView.builder(
                     itemCount: display_list.length,
                     itemBuilder: (context, index) => ListTile(

@@ -23,28 +23,33 @@ class _Edu_formState extends State<Edu_form> {
         Column(
           children: [
             Padding(
-              padding:  EdgeInsets.only(top: screenHeight*0.05, bottom: screenHeight*0.05),
+              padding: EdgeInsets.only(
+                  top: screenHeight * 0.05, bottom: screenHeight * 0.05),
               child: Image.asset(
                 'assets/images/logo.png',
-                height: screenHeight*0.15,
-                width: screenWidth*0.3,
+                height: screenHeight * 0.15,
+                width: screenWidth * 0.3,
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 30),
               child: Text(
-                "Add New Educational Charity Requirements",
-                style: GoogleFonts.inter(color: Colors.black, fontSize: screenWidth * 0.03 + 8,),
+                "Request Donations",
+                style: GoogleFonts.inter(
+                  color: Colors.black,
+                  fontSize: screenWidth * 0.03 + 8,
+                ),
               ),
             ),
             Container(
               child: Padding(
-                padding: EdgeInsets.only(left: screenWidth*0.08, right: screenWidth*0.08),
+                padding: EdgeInsets.only(
+                    left: screenWidth * 0.08, right: screenWidth * 0.08),
                 child: Form(
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
+                        padding: EdgeInsets.only(bottom: screenHeight * 0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "District",
@@ -54,7 +59,7 @@ class _Edu_formState extends State<Edu_form> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
+                        padding: EdgeInsets.only(bottom: screenHeight * 0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "School/Institute",
@@ -64,7 +69,7 @@ class _Edu_formState extends State<Edu_form> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
+                        padding: EdgeInsets.only(bottom: screenHeight * 0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "School/Institute Address",
@@ -74,7 +79,7 @@ class _Edu_formState extends State<Edu_form> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
+                        padding: EdgeInsets.only(bottom: screenHeight * 0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "List of Items",
@@ -84,7 +89,7 @@ class _Edu_formState extends State<Edu_form> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
+                        padding: EdgeInsets.only(bottom: screenHeight * 0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "Number of Students",
@@ -94,7 +99,7 @@ class _Edu_formState extends State<Edu_form> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(bottom: screenHeight*0.02),
+                        padding: EdgeInsets.only(bottom: screenHeight * 0.02),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "Description about Donation",
@@ -104,7 +109,7 @@ class _Edu_formState extends State<Edu_form> {
                         ),
                       ),
                       Padding(
-                        padding:EdgeInsets.only(bottom:screenHeight*0.1),
+                        padding: EdgeInsets.only(bottom: screenHeight * 0.1),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "Contact Numbers",
@@ -114,9 +119,11 @@ class _Edu_formState extends State<Edu_form> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(right:screenWidth*0.02 ,left:screenWidth*0.02),
+                        padding: EdgeInsets.only(
+                            right: screenWidth * 0.02,
+                            left: screenWidth * 0.02),
                         child: Container(
-                          height: screenHeight*0.075,
+                          height: screenHeight * 0.075,
                           decoration: BoxDecoration(
                               color: Color.fromARGB(255, 105, 0, 98),
                               borderRadius: BorderRadius.circular(50)),
@@ -138,7 +145,7 @@ class _Edu_formState extends State<Edu_form> {
                         ),
                       ),
                       SizedBox(
-                        height: screenHeight*0.05,
+                        height: screenHeight * 0.05,
                       )
                     ],
                   ),

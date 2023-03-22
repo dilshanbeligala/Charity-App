@@ -91,7 +91,7 @@ class _OthersState extends State<Others> {
                         Padding(
                           padding: EdgeInsets.only(left: screenWidth * 0.08),
                           child: Text(
-                            "Add New Charity",
+                            "Request New Charity",
                             style: GoogleFonts.inter(
                                 fontSize: screenWidth * 0.03 + 8,
                                 color: Colors.white,
@@ -111,7 +111,12 @@ class _OthersState extends State<Others> {
                 ),
               ),
               SizedBox(
-                height: screenHeight * 0.03,
+                height: screenHeight * 0.08,
+              ),
+              Text(
+                "Donate  Charities",
+                style: GoogleFonts.inter(
+                    fontSize: 20, fontWeight: FontWeight.bold),
               ),
               Container(
                   margin: EdgeInsets.only(
