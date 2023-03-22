@@ -1,4 +1,5 @@
 import 'package:charity_app/model/charity_model.dart';
+import 'package:charity_app/screens/donation_Page.dart';
 import 'package:charity_app/screens/forms/educatinF.dart';
 import 'package:charity_app/screens/notification.dart';
 import 'package:flutter/material.dart';
@@ -145,10 +146,10 @@ class _ClothesState extends State<Clothes> {
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                           onTap: (() {
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: ((context) => ShedPage())));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: ((context) => Donation_page())));
                           }),
                         )),
               )
