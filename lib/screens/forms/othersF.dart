@@ -33,7 +33,7 @@ class _Others_formState extends State<Others_form> {
             Padding(
               padding: const EdgeInsets.only(bottom: 30),
               child: Text(
-                "Add New Educational Charity",
+                "Add New Other Charity Requirements",
                 style: GoogleFonts.inter(color: Colors.black, fontSize: screenWidth * 0.03 + 8,),
               ),
             ),

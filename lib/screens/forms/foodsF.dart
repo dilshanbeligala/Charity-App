@@ -33,7 +33,7 @@ class _Foods_formState extends State<Foods_form> {
             Padding(
               padding: const EdgeInsets.only(bottom: 30),
               child: Text(
-                "Add New Educational Charity",
+                "Add New Food Charity Requirements",
                 style: GoogleFonts.inter(color: Colors.black, fontSize: screenWidth * 0.03 + 8,),
               ),
             ),

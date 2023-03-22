@@ -56,10 +56,7 @@ class _ClothesState extends State<Clothes> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 70),
-          child: Text("අත්වැල"),
-        ),
+        title: Text("අත්වැල"),
       ),
       body: Padding(
         padding: EdgeInsets.only(left: screenWidth*0.04, right: screenWidth*0.04, top: screenHeight*0.03),

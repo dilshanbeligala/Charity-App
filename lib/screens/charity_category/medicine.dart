@@ -56,10 +56,7 @@ class _MedicineState extends State<Medicine> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 105, 0, 98),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 70),
-          child: Text("අත්වැල"),
-        ),
+        title: Text("අත්වැල"),
         actions: [
           IconButton(
               onPressed: () {

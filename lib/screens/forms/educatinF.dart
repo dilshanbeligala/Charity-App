@@ -33,7 +33,7 @@ class _Edu_formState extends State<Edu_form> {
             Padding(
               padding: const EdgeInsets.only(bottom: 30),
               child: Text(
-                "Add New Educational Charity",
+                "Add New Educational Charity Requirements",
                 style: GoogleFonts.inter(color: Colors.black, fontSize: screenWidth * 0.03 + 8,),
               ),
             ),
