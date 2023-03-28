@@ -82,113 +82,117 @@ class _Notification_pageState extends State<Notification_page> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
-            child: Container(
-              height: 100,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(54, 155, 39, 176),
-                borderRadius: BorderRadius.circular(5),
-                border:
-                    Border.all(width: 0.5, color: Colors.black.withOpacity(.5)),
-              ),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
+            child: Card(
+              color: Color.fromARGB(54, 155, 39, 176),
+              elevation: 3,
+              shadowColor: Colors.black.withOpacity(.5),
+              child: GestureDetector(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            "nimaliudeshika@gmail.com",
+                            style: GoogleFonts.inter(
+                                fontSize: 14, color: Colors.black),
+                          ),
+                          Text(
+                            "  Added New Charity",
+                            style: GoogleFonts.inter(
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text("Educational Charity",
+                              style: GoogleFonts.inter(
+                                  fontSize: 17,
+                                  color: Color.fromARGB(255, 105, 0, 98),
+                                  fontWeight: FontWeight.bold))
+                        ],
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(
-                          "nimaliudeshika@gmail.com",
-                          style: GoogleFonts.inter(
-                              fontSize: 15, color: Colors.black),
-                        ),
-                        Text(
-                          "  Added New Charity",
-                          style: GoogleFonts.inter(
-                              fontSize: 16,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Text("See More >"),
                         )
                       ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Text("Educational Charity",
-                            style: GoogleFonts.inter(
-                                fontSize: 17,
-                                color: Color.fromARGB(255, 105, 0, 98),
-                                fontWeight: FontWeight.bold))
-                      ],
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: Text("See More >"),
-                      )
-                    ],
-                  )
-                ],
+                    )
+                  ],
+                ),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => Charity_Des()));
+                },
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
-            child: Container(
-              height: 100,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(54, 155, 39, 176),
-                borderRadius: BorderRadius.circular(5),
-                border:
-                    Border.all(width: 0.5, color: Colors.black.withOpacity(.5)),
-              ),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
+            child: Card(
+              color: Color.fromARGB(54, 155, 39, 176),
+              elevation: 3,
+              shadowColor: Colors.black.withOpacity(.5),
+              child: GestureDetector(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text(
+                            "nimaliudeshika@gmail.com",
+                            style: GoogleFonts.inter(
+                                fontSize: 14, color: Colors.black),
+                          ),
+                          Text(
+                            "  Added New Charity",
+                            style: GoogleFonts.inter(
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text("Educational Charity",
+                              style: GoogleFonts.inter(
+                                  fontSize: 17,
+                                  color: Color.fromARGB(255, 105, 0, 98),
+                                  fontWeight: FontWeight.bold))
+                        ],
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(
-                          "nimaliudeshika@gmail.com",
-                          style: GoogleFonts.inter(
-                              fontSize: 15, color: Colors.black),
-                        ),
-                        Text(
-                          "  Added New Charity",
-                          style: GoogleFonts.inter(
-                              fontSize: 16,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Text("See More >"),
                         )
                       ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Text("Educational Charity",
-                            style: GoogleFonts.inter(
-                                fontSize: 17,
-                                color: Color.fromARGB(255, 105, 0, 98),
-                                fontWeight: FontWeight.bold))
-                      ],
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: Text("See More >"),
-                      )
-                    ],
-                  )
-                ],
+                    )
+                  ],
+                ),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => Charity_Des()));
+                },
               ),
             ),
           ),

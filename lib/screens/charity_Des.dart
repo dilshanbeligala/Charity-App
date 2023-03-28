@@ -18,6 +18,22 @@ class _Charity_DesState extends State<Charity_Des> {
           child: Text("අත්වැල"),
         ),
       ),
+      body: ListView(
+        children: [
+          Column(
+            children: [
+              Row(
+                children: [
+                  Flexible(
+                    child: Text(
+                        "asdjbasikjakfuhfiwehfiuhfajljsfhkjsfahkfhkahfkhdfhhhhhhhhhhhhhhhhhhhhhhhsjjsdidfuuuuuuufmhcccccccccsdiuuuuuuuuuuuuuuuuusdfddddddddddhvkkkkdjd"),
+                  )
+                ],
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
