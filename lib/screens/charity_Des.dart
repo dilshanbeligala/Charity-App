@@ -27,6 +27,13 @@ class _Charity_DesState extends State<Charity_Des> {
                   Flexible(
                     child: Text(
                         "asdjbasikjakfuhfiwehfiuhfajljsfhkjsfahkfhkahfkhdfhhhhhhhhhhhhhhhhhhhhhhhsjjsdidfuuuuuuufmhcccccccccsdiuuuuuuuuuuuuuuuuusdfddddddddddhvkkkkdjd"),
+                  ),
+                  ListView(
+                    children: [
+                      ListTile(
+                        title: Text(""),
+                      )
+                    ],
                   )
                 ],
               )
