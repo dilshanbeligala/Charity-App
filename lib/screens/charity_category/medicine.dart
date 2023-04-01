@@ -1,3 +1,4 @@
+import 'package:charity_app/check_internet_connection.dart/check_internet_connection.dart';
 import 'package:charity_app/model/charity_model.dart';
 import 'package:charity_app/screens/donation_Page.dart';
 import 'package:charity_app/screens/forms/educatinF.dart';
@@ -53,115 +54,117 @@ class _MedicineState extends State<Medicine> {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 105, 0, 98),
-        title: Text("අත්වැල"),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => Notification_page()));
-              },
-              icon: Icon(Icons.notifications))
-        ],
-      ),
-      body: Padding(
-        padding: EdgeInsets.only(
-            left: screenWidth * 0.04,
-            right: screenWidth * 0.04,
-            top: screenHeight * 0.03),
-        child: Center(
-          child: Column(
-            children: [
-              Container(
-                height: screenHeight * 0.07,
-                decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 105, 0, 98),
-                    borderRadius: BorderRadius.circular(50)),
-                child: Center(
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => Edu_form()));
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(left: screenWidth * 0.08),
-                          child: Text(
-                            "Request Medicine Charity",
-                            style: GoogleFonts.inter(
-                                fontSize: screenWidth * 0.03 + 8,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500),
+    return InternetCheckWrapper(
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Color.fromARGB(255, 105, 0, 98),
+          title: Text("අත්වැල"),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => Notification_page()));
+                },
+                icon: Icon(Icons.notifications))
+          ],
+        ),
+        body: Padding(
+          padding: EdgeInsets.only(
+              left: screenWidth * 0.04,
+              right: screenWidth * 0.04,
+              top: screenHeight * 0.03),
+          child: Center(
+            child: Column(
+              children: [
+                Container(
+                  height: screenHeight * 0.07,
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 105, 0, 98),
+                      borderRadius: BorderRadius.circular(50)),
+                  child: Center(
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => Edu_form()));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: screenWidth * 0.08),
+                            child: Text(
+                              "Request Medicine Charity",
+                              style: GoogleFonts.inter(
+                                  fontSize: screenWidth * 0.03 + 8,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500),
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: screenWidth * 0.04),
-                          child: const Icon(
-                            Icons.add,
-                            color: Colors.white,
-                          ),
-                        )
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(right: screenWidth * 0.04),
+                            child: const Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: screenHeight * 0.08,
-              ),
-              Text(
-                "Donate Medicine Charities",
-                style: GoogleFonts.inter(
-                    fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              Container(
-                  margin: EdgeInsets.only(
-                      top: screenHeight * 0.01, bottom: screenHeight * 0.05),
-                  width: MediaQuery.of(context).size.width,
+                SizedBox(
                   height: screenHeight * 0.08,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: TextFormField(
-                    onChanged: ((value) => updateList(value)),
-                    decoration: InputDecoration(
-                        border: const UnderlineInputBorder(),
-                        hintText: "Search district here....",
-                        hintStyle: const TextStyle(
-                          color: Color.fromARGB(255, 105, 0, 98),
-                        ),
-                        prefixIcon: Icon(
-                          Icons.search,
-                          size: screenWidth * 0.06,
-                          color: const Color.fromARGB(255, 105, 0, 98),
-                        )),
-                  )),
-              Expanded(
-                child: ListView.builder(
-                    itemCount: display_list.length,
-                    itemBuilder: (context, index) => ListTile(
-                          contentPadding: EdgeInsets.all(8.0),
-                          title: Text(
-                            display_list[index].district!,
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "Donate Medicine Charities",
+                  style: GoogleFonts.inter(
+                      fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Container(
+                    margin: EdgeInsets.only(
+                        top: screenHeight * 0.01, bottom: screenHeight * 0.05),
+                    width: MediaQuery.of(context).size.width,
+                    height: screenHeight * 0.08,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: TextFormField(
+                      onChanged: ((value) => updateList(value)),
+                      decoration: InputDecoration(
+                          border: const UnderlineInputBorder(),
+                          hintText: "Search district here....",
+                          hintStyle: const TextStyle(
+                            color: Color.fromARGB(255, 105, 0, 98),
                           ),
-                          onTap: (() {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: ((context) => Donation_page())));
-                          }),
-                        )),
-              )
-            ],
+                          prefixIcon: Icon(
+                            Icons.search,
+                            size: screenWidth * 0.06,
+                            color: const Color.fromARGB(255, 105, 0, 98),
+                          )),
+                    )),
+                Expanded(
+                  child: ListView.builder(
+                      itemCount: display_list.length,
+                      itemBuilder: (context, index) => ListTile(
+                            contentPadding: EdgeInsets.all(8.0),
+                            title: Text(
+                              display_list[index].district!,
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            onTap: (() {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => Donation_page())));
+                            }),
+                          )),
+                )
+              ],
+            ),
           ),
         ),
       ),

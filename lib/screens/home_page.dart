@@ -1,3 +1,4 @@
+import 'package:charity_app/check_internet_connection.dart/check_internet_connection.dart';
 import 'package:charity_app/screens/charity_category/cloths.dart';
 import 'package:charity_app/screens/charity_category/education.dart';
 import 'package:charity_app/screens/charity_category/foods.dart';
@@ -25,146 +26,148 @@ class HomePage extends StatelessWidget {
     ];
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    return Scaffold(
-      drawer: GlassBox(child: SideBar()),
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 105, 0, 98),
-        leading: Builder(
-          builder: (context) => IconButton(
-            onPressed: () => Scaffold.of(context).openDrawer(),
-            icon: const Icon(Icons.menu,
-                color: Color.fromARGB(255, 255, 255, 255)),
+    return InternetCheckWrapper(
+      child: Scaffold(
+        drawer: GlassBox(child: SideBar()),
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 105, 0, 98),
+          leading: Builder(
+            builder: (context) => IconButton(
+              onPressed: () => Scaffold.of(context).openDrawer(),
+              icon: const Icon(Icons.menu,
+                  color: Color.fromARGB(255, 255, 255, 255)),
+            ),
           ),
+          title: Padding(
+            padding: const EdgeInsets.only(left: 70),
+            child: Text("අත්වැල"),
+          ),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => Notification_page()));
+                },
+                icon: Icon(Icons.notifications))
+          ],
         ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 70),
-          child: Text("අත්වැල"),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => Notification_page()));
-              },
-              icon: Icon(Icons.notifications))
-        ],
-      ),
-      body: ListView(children: [
-        Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(98, 192, 2, 210).withOpacity(.15)),
-              height: screenHeight * 0.4,
-              child: CarouselSlider(
-                items: imageList.map((imageUrl) {
-                  return Container(child: Image.network(imageUrl));
-                }).toList(),
-                options: CarouselOptions(
-                  height: screenHeight * 0.6,
-                  enlargeCenterPage: true,
-                  autoPlay: true,
-                  aspectRatio: 16 / 12,
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                  enableInfiniteScroll: true,
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  viewportFraction: 0.8,
+        body: ListView(children: [
+          Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(98, 192, 2, 210).withOpacity(.15)),
+                height: screenHeight * 0.4,
+                child: CarouselSlider(
+                  items: imageList.map((imageUrl) {
+                    return Container(child: Image.network(imageUrl));
+                  }).toList(),
+                  options: CarouselOptions(
+                    height: screenHeight * 0.6,
+                    enlargeCenterPage: true,
+                    autoPlay: true,
+                    aspectRatio: 16 / 12,
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    enableInfiniteScroll: true,
+                    autoPlayAnimationDuration: Duration(milliseconds: 800),
+                    viewportFraction: 0.8,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: screenHeight * 0.008,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: screenWidth * 0.035),
-              child: Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Categories",
-                      style: GoogleFonts.inter(
-                          fontSize: screenWidth * 0.035 + 12,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
+              SizedBox(
+                height: screenHeight * 0.008,
               ),
-            ),
-            SizedBox(
-              height: screenHeight * 0.02,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: screenWidth * 0.035),
-              child: SingleChildScrollView(
+              Padding(
+                padding: EdgeInsets.only(left: screenWidth * 0.035),
                 child: Container(
-                  height: screenHeight * 0.4,
-                  child: GridView.count(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 10,
-                    children: <Widget>[
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Education()),
-                          );
-                        },
-                        child: makeCategory(
-                            Image: 'assets/images/edu.jpg', title: 'Education'),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Foods()),
-                          );
-                        },
-                        child: makeCategory(
-                            Image: 'assets/images/food.jpg', title: 'Foods'),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Clothes()),
-                          );
-                        },
-                        child: makeCategory(
-                            Image: 'assets/images/cloth.jpg', title: 'Cloths'),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Medicine()),
-                          );
-                        },
-                        child: makeCategory(
-                            Image: 'assets/images/med.jpg', title: 'Medicine'),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Others()),
-                          );
-                        },
-                        child: makeCategory(
-                            Image: 'assets/images/other.jpg', title: 'Others'),
-                      ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Categories",
+                        style: GoogleFonts.inter(
+                            fontSize: screenWidth * 0.035 + 12,
+                            fontWeight: FontWeight.bold),
+                      )
                     ],
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: screenHeight * 0.05,
-            ),
-          ],
-        ),
-      ]),
+              SizedBox(
+                height: screenHeight * 0.02,
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: screenWidth * 0.035),
+                child: SingleChildScrollView(
+                  child: Container(
+                    height: screenHeight * 0.4,
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 10,
+                      children: <Widget>[
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Education()),
+                            );
+                          },
+                          child: makeCategory(
+                              Image: 'assets/images/edu.jpg', title: 'Education'),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Foods()),
+                            );
+                          },
+                          child: makeCategory(
+                              Image: 'assets/images/food.jpg', title: 'Foods'),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Clothes()),
+                            );
+                          },
+                          child: makeCategory(
+                              Image: 'assets/images/cloth.jpg', title: 'Cloths'),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Medicine()),
+                            );
+                          },
+                          child: makeCategory(
+                              Image: 'assets/images/med.jpg', title: 'Medicine'),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Others()),
+                            );
+                          },
+                          child: makeCategory(
+                              Image: 'assets/images/other.jpg', title: 'Others'),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: screenHeight * 0.05,
+              ),
+            ],
+          ),
+        ]),
+      ),
     );
   }
 }
