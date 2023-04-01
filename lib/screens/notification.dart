@@ -16,11 +16,9 @@ class _Notification_pageState extends State<Notification_page> {
     return InternetCheckWrapper(
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Color.fromARGB(255, 105, 0, 98),
-          title: Padding(
-            padding: const EdgeInsets.only(left: 70),
-            child: Text("අත්වැල"),
-          ),
+          title: Text("Notifications"),
         ),
         body: Column(
           children: [

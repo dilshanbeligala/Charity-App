@@ -1,6 +1,11 @@
 import 'package:charity_app/screens/notification.dart';
+import 'package:charity_app/screens/settings/account_settings/change_password.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'settings/app_settings/app_settings.dart';
+import 'settings/contact_us/contact_us.dart';
+import 'settings/help/help.dart';
 
 class SideBar extends StatelessWidget {
   const SideBar({super.key});
@@ -61,7 +66,10 @@ class SideBar extends StatelessWidget {
                 style: GoogleFonts.inter(
                     color: Colors.white, fontSize: screenWidth * 0.015 + 10),
               ),
-              onTap: () => null,
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) =>ChangePasswordPage()));
+              },
             ),
             ListTile(
               leading: Icon(
@@ -74,7 +82,10 @@ class SideBar extends StatelessWidget {
                 style: GoogleFonts.inter(
                     color: Colors.white, fontSize: screenWidth * 0.015 + 10),
               ),
-              onTap: () => null,
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) =>Help()));
+              },
             ),
             ListTile(
               leading: Icon(
@@ -88,8 +99,8 @@ class SideBar extends StatelessWidget {
                     color: Colors.white, fontSize: screenWidth * 0.015 + 10),
               ),
               onTap: () {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => const Settings()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AppSettings()));
               },
             ),
             ListTile(
@@ -104,10 +115,10 @@ class SideBar extends StatelessWidget {
                     color: Colors.white, fontSize: screenWidth * 0.015 + 10),
               ),
               onTap: () {
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) => const ContactUsPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>  ContactUs()));
               },
             ),
           ],

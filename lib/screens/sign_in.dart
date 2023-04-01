@@ -1,4 +1,5 @@
 import 'package:charity_app/check_internet_connection.dart/check_internet_connection.dart';
+import 'package:charity_app/forgot_password/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,6 +13,7 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  bool _isObscure = true;
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -86,11 +88,49 @@ class _SignInState extends State<SignIn> {
                                 prefixIcon: Icon(Icons.password),
                                 border: UnderlineInputBorder(),
                                 errorStyle: TextStyle(fontSize: 16),
+                                suffixIcon: IconButton(
+                                icon: Icon(_isObscure ? Icons.visibility_off : Icons.visibility),
+                                onPressed: () {
+                                  setState(() {
+                                    _isObscure = !_isObscure;
+                                  });
+                                },
                               ),
+                              ),
+                               obscureText: _isObscure,
                             ),
                             SizedBox(
-                              height: screenHeight*0.06,
-                            ),             
+                              height: screenHeight*0.03,
+                            ),  
+                            // Container(
+                            //   child: Row(
+                            //     mainAxisAlignment: MainAxisAlignment.end,
+                            //     children: [Text("Forgot Password?",style: TextStyle(color:Color.fromARGB(255, 105, 0, 98),decoration: TextDecoration.underline),)],),
+                            // ),  
+                            Container(
+  child: GestureDetector(
+    onTap: () {
+     Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ForgotPassword()));
+    },
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Text(
+          "Forgot Password?",
+          style: TextStyle(
+            color: Color.fromARGB(255, 105, 0, 98),
+            decoration: TextDecoration.underline,
+          ),
+        ),
+      ],
+    ),
+  ),
+),
+
+                            SizedBox(
+                              height: screenHeight*0.03,
+                            ),         
                             ElevatedButton(               
                               style: ElevatedButton.styleFrom(
                             primary: Color.fromARGB(255, 105, 0, 98),
@@ -116,6 +156,9 @@ class _SignInState extends State<SignIn> {
                                         fontWeight: FontWeight.w500),),
                             ),
                             ),
+                             SizedBox(
+                              height: screenHeight*0.06,
+                            ),   
                          ]),
                       ),
                       )
