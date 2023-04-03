@@ -1,8 +1,8 @@
 import 'package:charity_app/check_internet_connection.dart/check_internet_connection.dart';
-import 'package:charity_app/forgot_password/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../forgot_password/forgot_password.dart';
 import 'home_page.dart';
 
 class SignIn extends StatefulWidget {
